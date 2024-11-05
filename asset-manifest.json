@@ -1,15 +1,19 @@
 {
   "files": {
     "main.css": "/election-analytics/static/css/main.e6c13ad2.css",
-    "main.js": "/election-analytics/static/js/main.28dccbb1.js",
+    "main.js": "/election-analytics/static/js/main.dc9929e5.js",
     "static/js/453.a1835552.chunk.js": "/election-analytics/static/js/453.a1835552.chunk.js",
+    "static/media/congress.png": "/election-analytics/static/media/congress.4113184ce115684bf4e1.png",
+    "static/media/uml.png": "/election-analytics/static/media/uml.4806e24ba060c0af162d.png",
+    "static/media/maoist.png": "/election-analytics/static/media/maoist.1f2cee6fd74365d77592.png",
+    "static/media/rrp.png": "/election-analytics/static/media/rrp.b6f625a8ca7a2cbe6ad7.png",
     "index.html": "/election-analytics/index.html",
     "main.e6c13ad2.css.map": "/election-analytics/static/css/main.e6c13ad2.css.map",
-    "main.28dccbb1.js.map": "/election-analytics/static/js/main.28dccbb1.js.map",
+    "main.dc9929e5.js.map": "/election-analytics/static/js/main.dc9929e5.js.map",
     "453.a1835552.chunk.js.map": "/election-analytics/static/js/453.a1835552.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.28dccbb1.js"
+    "static/js/main.dc9929e5.js"
   ]
 }
