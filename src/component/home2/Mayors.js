@@ -6,18 +6,20 @@ import { ImCross } from "react-icons/im";
 import congress from '../media/congress.png'
 import uml from '../media/uml.png';
 import maoist from '../media/maoist.png';
-import rrp from '../media/rrp.png';
+import independent from '../media/independent.png';
+import jsp from '../media/jsp.png';
 
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const MayorStanding = () => {
+const Mayors = () => {
   
   const candidates = [
-    { name: "धनमाया शाही", age: "२१", party: "नेपाली कांग्रेस", votes: 2912 , logo:congress},
-    { name: "सुनिता बोहरा", age: "३९", party: "नेकपा एमाले", votes: 2623, logo:uml },
-    { name: "बालकुमारी बस्नेत", age: "३४", party: "माओवादी", votes: 3241, logo:maoist },
-    { name: "डम्मर कुमारी बानिया", age: "४८", party: "राप्रपा", votes: 74, logo:rrp },
+    { name: "डम्मर बहादुर रावत", age: "५२", party: "माओवादी ", votes: 5599 , logo:maoist},
+    { name: "धर्म बहादुर शाही", age: "५३", party: "नेकपा एमाले", votes: 3626, logo:uml },
+    { name: "बिन बहादुर सिंह", age: "५९", party: "राष्ट्रिय स्वतन्त्र", votes: 665, logo:independent},
+    { name: "छब्बी पन्त", age: "३१", party: "नेपाली कांग्रेस", votes: 652, logo:congress },
+    { name: "सत्यलाल गौतम", age: "६४", party: "जनता समाजवादी", votes: 17, logo:jsp },
   ];
 
   // Find the highest vote 
@@ -28,7 +30,7 @@ const MayorStanding = () => {
     labels: candidates.map(candidate => candidate.name),
     datasets: [
       {
-        label: "Bar Diagram representing deputy mayor standing votes",
+        label: "Bar Diagram representing mayor standing votes",
         data: candidates.map(candidate => candidate.votes),
         backgroundColor: "rgba(75, 192, 192, 0.6)",
         borderColor: "rgba(75, 192, 192, 1)",
@@ -59,12 +61,12 @@ const MayorStanding = () => {
   };
 
   return (
-    <div className="p-6 my-5">
+    <div className="p-6">
       <div className="flex flex-col lg:flex-row lg:space-x-6">
         {/* Table */}
         <div className="flex-grow mb-6 lg:mb-0 overflow-x-auto w-full md:w-1/2">
-          <table className="table-auto min-w-full border border-gray-500 text-center bg-gray-800 text-gray-100">
-            <caption className="text-left text-lg mb-2 font-bold text-black">Deputy Mayor Standings</caption>
+          <table className="table-auto min-w-full border border-gray-500 text-center bg-gray-800 text-gray-100 shadow-md">
+            <caption className="text-left text-lg mb-2 font-bold text-black">Mayor Standings</caption>
             <thead className="bg-gray-700 text-gray-200">
               <tr>
                 <th className="px-4 py-2 border border-gray-600">Name</th>
@@ -84,7 +86,7 @@ const MayorStanding = () => {
                     {candidate.party}
                   </td>
                   <td className="px-4 py-2 border border-gray-600">{candidate.votes}</td>
-                  <td className="px-4 py-2 border border-gray-600 text-center">
+                  <td className="px-4 py-2  flex items-center justify-center">
                     {candidate.votes === highestVotes ? <FaCheck /> : <ImCross />}
                   </td>
                 </tr>
@@ -103,4 +105,4 @@ const MayorStanding = () => {
   );
 };
 
-export default MayorStanding;
+export default Mayors;

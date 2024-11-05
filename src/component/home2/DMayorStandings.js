@@ -5,19 +5,19 @@ import { FaCheck } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import congress from '../media/congress.png'
 import uml from '../media/uml.png';
-import maoist from '../media/maoist.png';
+import independent from '../media/independent.png';
 import rrp from '../media/rrp.png';
 
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const MayorStanding = () => {
+const DMayorStanding = () => {
   
   const candidates = [
-    { name: "धनमाया शाही", age: "२१", party: "नेपाली कांग्रेस", votes: 2912 , logo:congress},
-    { name: "सुनिता बोहरा", age: "३९", party: "नेकपा एमाले", votes: 2623, logo:uml },
-    { name: "बालकुमारी बस्नेत", age: "३४", party: "माओवादी", votes: 3241, logo:maoist },
-    { name: "डम्मर कुमारी बानिया", age: "४८", party: "राप्रपा", votes: 74, logo:rrp },
+    { name: "सरिता सिंह", age: "३३", party: "नेपाली कांग्रेस", votes: 5406 , logo:congress},
+    { name: "सुनिता बोहरा", age: "४३", party: "नेकपा एमाले", votes: 3393, logo:uml },
+    { name: "सुशीला कुमारी शाही", age: "४३", party: "राष्ट्रिय स्वतन्त्र", votes: 94, logo:independent },
+    { name: "डम्मर कुमारी बानिया", age: "५२", party: "राप्रपा", votes: 48, logo:rrp },
   ];
 
   // Find the highest vote 
@@ -103,4 +103,4 @@ const MayorStanding = () => {
   );
 };
 
-export default MayorStanding;
+export default DMayorStanding;
