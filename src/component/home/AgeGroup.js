@@ -9,17 +9,17 @@ const ageGroupsData = [
   { ageGroup: 'Below 24', maleCount: 1157, femaleCount: 795 },
   { ageGroup: 'Below 40', maleCount: 2597, femaleCount: 2366 },
   { ageGroup: 'Below 60', maleCount: 2130, femaleCount: 1822 },
-  { ageGroup: 'Below 75', maleCount: 671, femaleCount: 630},
+  { ageGroup: 'Below 75', maleCount: 671, femaleCount: 630 },
   { ageGroup: 'Above 75', maleCount: 79, femaleCount: 96 },
 ];
 
 const AgeGroup = () => {
   return (
-    <div className='flex flex-col lg:flex-row justify-between items-start my-10'>
-      <div className='w-full md:w-1/2'>
+    <div className="flex flex-col lg:flex-row justify-between items-center my-12 space-y-6 lg:space-y-0">
+      <div className="w-full lg:w-1/2 p-4">
         <AgeGroupTable ageGroups={ageGroupsData} />
       </div>
-      <div className='w-full md:w-1/2'>
+      <div className="w-full lg:w-1/2 p-4 flex justify-center">
         <AgeGroupPieChart ageGroups={ageGroupsData} />
       </div>
     </div>

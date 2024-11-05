@@ -34,36 +34,36 @@ const VoterData = () => {
   };
 
   return (
-    <div className="container">
-      <div className="flex flex-col lg:flex-row justify-between items-start">
+    <div className="container mx-auto p-4">
+      <div className="flex flex-col lg:flex-row justify-between items-center">
         {/* Table */}
         <div className="lg:w-1/2 w-full mb-4 lg:mb-0">
-          <table className="table-auto w-full border border-gray-300 text-center">
-          <caption className="text-left text-lg font-semibold mb-2">
-              Voters Description
+          <table className="min-w-full border border-gray-500 text-center bg-gray-800 text-gray-100">
+            <caption className="text-left text-lg mb-2 font-bold text-black">
+              Voters Distribution
             </caption>
-            <thead className="bg-gray-100">
+            <thead className="bg-gray-700 text-gray-200">
               <tr>
-                <th className="px-4 py-2 border bg-slate-200">Voters Description Count</th>
-                <th className="px-4 py-2 border bg-slate-200">Count</th>
+                <th className="px-4 py-2 border border-gray-600">Voters Count</th>
+                <th className="px-4 py-2 border border-gray-600">Count</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="border px-4 py-2">Male</td>
-                <td className="border px-4 py-2">{males}</td>
+              <tr className="bg-gray-800">
+                <td className="border border-gray-600 px-4 py-2">Male</td>
+                <td className="border border-gray-600 px-4 py-2">{males}</td>
               </tr>
-              <tr>
-                <td className="border px-4 py-2">Female</td>
-                <td className="border px-4 py-2">{females}</td>
+              <tr className="bg-gray-800">
+                <td className="border border-gray-600 px-4 py-2">Female</td>
+                <td className="border border-gray-600 px-4 py-2">{females}</td>
               </tr>
-              <tr>
-                <td className="border px-4 py-2">Total Eligible Voters</td>
-                <td className="border px-4 py-2">{eligibleVoters}</td>
+              <tr className="bg-gray-800">
+                <td className="border border-gray-600 px-4 py-2">Total Eligible Voters</td>
+                <td className="border border-gray-600 px-4 py-2">{eligibleVoters}</td>
               </tr>
-              <tr>
-                <td className="border px-4 py-2 bg-slate-400">Total Population</td>
-                <td className="border px-4 py-2 bg-slate-400">{totalPopulation}</td>
+              <tr className="bg-gray-900">
+                <td className="border border-gray-600 px-4 py-2 font-bold">Total Population</td>
+                <td className="border border-gray-600 px-4 py-2 font-bold">{totalPopulation}</td>
               </tr>
             </tbody>
           </table>
@@ -72,7 +72,7 @@ const VoterData = () => {
         {/* Pie Chart */}
         <div className="lg:w-1/2 w-full flex justify-center items-center" style={{ height: '300px' }}>
           <div className="max-w-lg mx-auto" style={{ height: '100%' }}>
-            <h2 className="text-center text-lg font-bold">Voters Distribution</h2>
+            <h2 className="text-center text-lg font-bold text-black mb-4">Voters Distribution</h2>
             <Pie data={pieData} height={400} />
           </div>
         </div>
