@@ -6,6 +6,7 @@ const Header = () => {
 
   return (
     <div className="flex justify-between items-center shadow-md shadow-black p-6">
+      <Link to="/">
       <h1
         style={{
           fontFamily: "Poppins, sans-serif",
@@ -16,11 +17,12 @@ const Header = () => {
       >
         Election Analytics
       </h1>
+      </Link>
       <div className="flex space-x-4">
-        <Link to="/2074-data-analytics">
+        <Link to="/data-analytics">
           <button
             className={`px-4 py-2 rounded-md focus:outline-none ${
-              location.pathname === "/2074-data-analytics"
+              location.pathname === "/data-analytics"
                 ? "bg-blue-600 text-white"
                 : "bg-blue-500 text-white hover:bg-blue-600"
             }`}
