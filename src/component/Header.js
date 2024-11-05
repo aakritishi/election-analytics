@@ -19,10 +19,10 @@ const Header = () => {
       </h1>
       </Link>
       <div className="flex space-x-4">
-        <Link to="/data-analytics">
+        <Link to="/">
           <button
             className={`px-4 py-2 rounded-md focus:outline-none ${
-              location.pathname === "/data-analytics"
+              location.pathname === "/"
                 ? "bg-blue-600 text-white"
                 : "bg-blue-500 text-white hover:bg-blue-600"
             }`}

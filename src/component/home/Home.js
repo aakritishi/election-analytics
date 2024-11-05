@@ -4,6 +4,7 @@ import AgeGroup from './AgeGroup'
 import EducationData from './EducationalData'
 import DisabilityData from './DisabilityData'
 import Mayor from './Mayor'
+import MayorStanding from './MayorStandings'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <EducationData/>
         <DisabilityData/>
         <Mayor/>
+        <MayorStanding/>
     </div>
   )
 }

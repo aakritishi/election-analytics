@@ -15,12 +15,14 @@ const ageGroupsData = [
 
 const AgeGroup = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center my-12 space-y-6 lg:space-y-0">
+    <div className="flex flex-col lg:flex-row justify-center items-center my-12 space-y-6 lg:space-y-0">
       <div className="w-full lg:w-1/2 p-4">
         <AgeGroupTable ageGroups={ageGroupsData} />
       </div>
-      <div className="w-full lg:w-1/2 p-4 flex justify-center">
-        <AgeGroupPieChart ageGroups={ageGroupsData} />
+      <div className="w-full lg:w-1/2 p-4 flex justify-center items-center">
+        <div className="flex justify-center items-center w-full"> 
+          <AgeGroupPieChart ageGroups={ageGroupsData} />
+        </div>
       </div>
     </div>
   );

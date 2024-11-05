@@ -10,7 +10,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} /> 
-          <Route path="/data-analytics" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/2079-data-analytics" element={<Home2 />} />
           {/* redirect to home in any state */}
           <Route path="*" element={<Navigate to="/" />} />

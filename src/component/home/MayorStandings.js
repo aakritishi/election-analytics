@@ -11,13 +11,13 @@ import rrp from '../media/rrp.png';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const Mayor = () => {
+const MayorStanding = () => {
   
   const candidates = [
-    { name: "देवी पन्त", age: "२७", party: "नेपाली कांग्रेस", votes: 2898 , logo:congress},
-    { name: "नबेन्द्र नेपाली", age: "३९", party: "नेकपा एमाले", votes: 2674, logo:uml },
-    { name: "टेक बहादुर रावल", age: "६०", party: "माओवादी", votes: 3418, logo:maoist },
-    { name: "लक्ष्मण सिंह", age: "३८", party: "राप्रपा", votes: 71, logo:rrp },
+    { name: "धनमाया शाही", age: "२१", party: "नेपाली कांग्रेस", votes: 2912 , logo:congress},
+    { name: "सुनिता बोहरा", age: "३९", party: "नेकपा एमाले", votes: 2623, logo:uml },
+    { name: "बालकुमारी बस्नेत", age: "३४", party: "माओवादी", votes: 3241, logo:maoist },
+    { name: "डम्मर कुमारी", age: "४८", party: "राप्रपा", votes: 74, logo:rrp },
   ];
 
   // Find the highest vote 
@@ -28,7 +28,7 @@ const Mayor = () => {
     labels: candidates.map(candidate => candidate.name),
     datasets: [
       {
-        label: "Bar Diagram representing mayor standing votes",
+        label: "Bar Diagram representing deputy mayor standing votes",
         data: candidates.map(candidate => candidate.votes),
         backgroundColor: "rgba(75, 192, 192, 0.6)",
         borderColor: "rgba(75, 192, 192, 1)",
@@ -59,12 +59,12 @@ const Mayor = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="p-6 my-5">
       <div className="flex flex-col lg:flex-row lg:space-x-6">
         {/* Table */}
         <div className="flex-grow mb-6 lg:mb-0 overflow-x-auto w-full md:w-1/2">
-          <table className="table-auto min-w-full border border-gray-500 text-center bg-gray-800 text-gray-100 shadow-md">
-            <caption className="text-left text-lg mb-2 font-bold text-black">Mayor Standings</caption>
+          <table className="table-auto min-w-full border border-gray-500 text-center bg-gray-800 text-gray-100 shadow-lg rounded-lg">
+            <caption className="text-left text-lg mb-2 font-bold text-black">Deputy Mayor Standings</caption>
             <thead className="bg-gray-700 text-gray-200">
               <tr>
                 <th className="px-4 py-2 border border-gray-600">Name</th>
@@ -84,7 +84,7 @@ const Mayor = () => {
                     {candidate.party}
                   </td>
                   <td className="px-4 py-2 border border-gray-600">{candidate.votes}</td>
-                  <td className="px-4 py-2  flex items-center justify-center">
+                  <td className="px-4 py-2 border border-gray-600 text-center">
                     {candidate.votes === highestVotes ? <FaCheck /> : <ImCross />}
                   </td>
                 </tr>
@@ -103,4 +103,4 @@ const Mayor = () => {
   );
 };
 
-export default Mayor;
+export default MayorStanding;
