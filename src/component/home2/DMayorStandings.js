@@ -72,7 +72,7 @@ const DMayorStanding = () => {
   };
 
   return (
-    <div className="p-6 my-5">
+    <div className="p-4 my-8">
       <div className="flex flex-col lg:flex-row lg:space-x-6">
         {/* Table */}
         <div className="flex-grow mb-6 lg:mb-0 overflow-x-auto w-full md:w-1/2">
@@ -109,7 +109,7 @@ const DMayorStanding = () => {
 
         {/* Bar Chart */}
         <div className="flex-grow md:w-1/2 w-full" style={{ maxWidth: "600px", height: "400px" }}>
-          <h2 className="text-center text-lg font-bold mb-4 text-black">Votes Distribution</h2>
+          <h2 className="text-center text-lg font-bold mb-4 text-black">Votes Distribution for Deputy Mayor Standings</h2>
           <Bar data={barChartData} options={barChartOptions} />
         </div>
       </div>

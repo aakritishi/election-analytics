@@ -72,7 +72,7 @@ const MayorStanding = () => {
       <div className="flex flex-col lg:flex-row lg:space-x-6">
         <div className="flex-grow mb-6 lg:mb-0 overflow-x-auto w-full md:w-1/2">
           <table className="table-auto min-w-full border border-gray-500 text-center bg-gray-800 text-gray-100">
-            <caption className="text-left text-lg mb-2 font-bold text-black">Mayor Standings</caption>
+            <caption className="text-left text-lg mb-2 font-bold text-black">Deputy Mayor Standings</caption>
             <thead className="bg-gray-700 text-gray-200">
               <tr>
                 <th className="px-4 py-2 border border-gray-600">Name</th>
@@ -101,7 +101,7 @@ const MayorStanding = () => {
         </div>
 
         <div className="flex-grow md:w-1/2 w-full max-w-[600px] h-[400px]">
-          <h2 className="text-center text-lg font-bold mb-4 text-black">Votes Distribution</h2>
+          <h2 className="text-center text-lg font-bold mb-4 text-black">Votes Distribution for Deputy Mayor Standings</h2>
           <Bar data={barChartData} options={barChartOptions} />
         </div>
       </div>

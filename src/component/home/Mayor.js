@@ -109,7 +109,7 @@ const Mayor = () => {
 
         {/* Bar Chart */}
         <div className="flex-grow md:w-1/2 w-full" style={{ maxWidth: "600px", height: "400px" }}>
-          <h2 className="text-center text-lg font-bold mb-4 text-black">Votes Distribution</h2>
+          <h2 className="text-center text-lg font-bold mb-4 text-black">Votes Distribution for Mayor Standings</h2>
           <Bar data={barChartData} options={barChartOptions} />
         </div>
       </div>
