@@ -40,7 +40,7 @@ const VoterData = () => {
         <div className="lg:w-1/2 w-full mb-4 lg:mb-0">
           <table className="min-w-full border border-gray-500 text-center bg-gray-800 text-gray-100">
             <caption className="text-left text-lg mb-2 font-bold text-black">
-              Voters Distribution
+              Voters Distribution of 2074
             </caption>
             <thead className="bg-gray-700 text-gray-200">
               <tr>
@@ -49,6 +49,10 @@ const VoterData = () => {
               </tr>
             </thead>
             <tbody>
+              <tr className="bg-gray-800">
+                <td className="border border-gray-600 px-4 py-2 font-bold">Total Population</td>
+                <td className="border border-gray-600 px-4 py-2 font-bold">{totalPopulation}</td>
+              </tr>
               <tr className="bg-gray-800">
                 <td className="border border-gray-600 px-4 py-2">Male</td>
                 <td className="border border-gray-600 px-4 py-2">{males}</td>
@@ -60,10 +64,6 @@ const VoterData = () => {
               <tr className="bg-gray-800">
                 <td className="border border-gray-600 px-4 py-2">Total Eligible Voters</td>
                 <td className="border border-gray-600 px-4 py-2">{eligibleVoters}</td>
-              </tr>
-              <tr className="bg-gray-900">
-                <td className="border border-gray-600 px-4 py-2 font-bold">Total Population</td>
-                <td className="border border-gray-600 px-4 py-2 font-bold">{totalPopulation}</td>
               </tr>
             </tbody>
           </table>

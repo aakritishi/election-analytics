@@ -4,10 +4,11 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const TotalVoters = () => {
+const VoterData = () => {
   // Data for the table
   const totalPopulation = 28858;
-  const noneligibleVoters = 12345;
+  const males = 14359;
+  const females = 14499;
   const eligibleVoters = 16504;
 
   // Data for the pie chart
@@ -16,7 +17,7 @@ const TotalVoters = () => {
     datasets: [
       {
         label: 'Voter Distribution',
-        data: [ eligibleVoters,noneligibleVoters],
+        data: [males, females, eligibleVoters],
         backgroundColor: [
           'rgba(54, 162, 235, 0.6)', 
           'rgba(255, 99, 132, 0.6)',  
@@ -39,7 +40,7 @@ const TotalVoters = () => {
         <div className="lg:w-1/2 w-full mb-4 lg:mb-0">
           <table className="min-w-full border border-gray-500 text-center bg-gray-800 text-gray-100">
             <caption className="text-left text-lg mb-2 font-bold text-black">
-              Voters Distribution
+              Voters Distribution of 2079
             </caption>
             <thead className="bg-gray-700 text-gray-200">
               <tr>
@@ -48,18 +49,23 @@ const TotalVoters = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="bg-gray-800">
-                <td className="border border-gray-600 px-4 py-2">Eligible Voters</td>
-                <td className="border border-gray-600 px-4 py-2">{eligibleVoters}</td>
-              </tr>
-              <tr className="bg-gray-800">
-                <td className="border border-gray-600 px-4 py-2">Non Eligible Voters</td>
-                <td className="border border-gray-600 px-4 py-2">{noneligibleVoters}</td>
-              </tr>
-              <tr className="bg-gray-900">
+            <tr className="bg-gray-800">
                 <td className="border border-gray-600 px-4 py-2 font-bold">Total Population</td>
                 <td className="border border-gray-600 px-4 py-2 font-bold">{totalPopulation}</td>
               </tr>
+              <tr className="bg-gray-800">
+                <td className="border border-gray-600 px-4 py-2">Male</td>
+                <td className="border border-gray-600 px-4 py-2">{males}</td>
+              </tr>
+              <tr className="bg-gray-800">
+                <td className="border border-gray-600 px-4 py-2">Female</td>
+                <td className="border border-gray-600 px-4 py-2">{females}</td>
+              </tr>
+              <tr className="bg-gray-800">
+                <td className="border border-gray-600 px-4 py-2">Total Eligible Voters</td>
+                <td className="border border-gray-600 px-4 py-2">{eligibleVoters}</td>
+              </tr>
+              
             </tbody>
           </table>
         </div>
@@ -76,4 +82,4 @@ const TotalVoters = () => {
   );
 };
 
-export default TotalVoters;
+export default VoterData;
