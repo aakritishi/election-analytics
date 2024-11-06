@@ -1,37 +1,47 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
-import { FaCheck } from "react-icons/fa";
-import { ImCross } from "react-icons/im";
-import congress from '../media/congress.png'
+import congress from '../media/congress.png';
 import uml from '../media/uml.png';
 import maoist from '../media/maoist.png';
 import rrp from '../media/rrp.png';
 
-
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const Mayor = () => {
-  
+  // Candidates data
   const candidates = [
-    { name: "देवी पन्त", age: "२७", party: "नेपाली कांग्रेस", votes: 2898 , logo:congress},
-    { name: "नबेन्द्र नेपाली", age: "३९", party: "नेकपा एमाले", votes: 2674, logo:uml },
-    { name: "टेक बहादुर रावल", age: "६०", party: "माओवादी", votes: 3418, logo:maoist },
-    { name: "लक्ष्मण सिंह", age: "३८", party: "राप्रपा", votes: 71, logo:rrp },
+    { name: "देवी पन्त", age: "२७", party: "नेपाली कांग्रेस", votes: 2898, logo: congress },
+    { name: "नबेन्द्र नेपाली", age: "३९", party: "नेकपा एमाले", votes: 2674, logo: uml },
+    { name: "टेक बहादुर रावल", age: "६०", party: "माओवादी", votes: 3418, logo: maoist },
+    { name: "लक्ष्मण सिंह", age: "३८", party: "राप्रपा", votes: 71, logo: rrp },
   ];
 
-  // Find the highest vote 
-  const highestVotes = Math.max(...candidates.map(candidate => candidate.votes));
+  // Sort candidates from highest to lowest votes
+  const sortedCandidates = [...candidates].sort((a, b) => b.votes - a.votes);
+
+  // Find the highest vote
+  const highestVotes = sortedCandidates[0]?.votes || 0;
 
   // Bar chart data
   const barChartData = {
     labels: candidates.map(candidate => candidate.name),
     datasets: [
       {
-        label: "Bar Diagram representing mayor standing votes",
+        label: null,
         data: candidates.map(candidate => candidate.votes),
-        backgroundColor: "rgba(75, 192, 192, 0.6)",
-        borderColor: "rgba(75, 192, 192, 1)",
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.6)",
+          "rgba(54, 162, 235, 0.6)",  
+          "rgba(255, 206, 86, 0.6)",
+          "rgba(75, 192, 192, 0.6)",
+        ],
+        borderColor: [
+          "rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(255, 206, 86, 1)",
+          "rgba(75, 192, 192, 1)",
+        ],
         borderWidth: 1,
       },
     ],
@@ -40,6 +50,11 @@ const Mayor = () => {
   // Bar chart options with smaller label font size
   const barChartOptions = {
     maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
     scales: {
       x: {
         ticks: {
@@ -71,12 +86,14 @@ const Mayor = () => {
                 <th className="px-4 py-2 border border-gray-600">Age</th>
                 <th className="px-4 py-2 border border-gray-600">Party</th>
                 <th className="px-4 py-2 border border-gray-600">Votes</th>
-                <th className="px-4 py-2 border border-gray-600">Winner or Not</th>
               </tr>
             </thead>
             <tbody>
-              {candidates.map((candidate, index) => (
-                <tr key={index} className="border border-gray-600 text-center">
+              {sortedCandidates.map((candidate, index) => (
+                <tr
+                  key={index}
+                  className={`border border-gray-600 text-center ${candidate.votes === highestVotes ? 'bg-yellow-300 text-black' : ''}`}
+                >
                   <td className="px-4 py-2 border border-gray-600">{candidate.name}</td>
                   <td className="px-4 py-2 border border-gray-600">{candidate.age}</td>
                   <td className="px-4 py-2 border border-gray-600 flex items-center justify-center">
@@ -84,9 +101,6 @@ const Mayor = () => {
                     {candidate.party}
                   </td>
                   <td className="px-4 py-2 border border-gray-600">{candidate.votes}</td>
-                  <td className="px-4 py-2  flex items-center justify-center">
-                    {candidate.votes === highestVotes ? <FaCheck /> : <ImCross />}
-                  </td>
                 </tr>
               ))}
             </tbody>
