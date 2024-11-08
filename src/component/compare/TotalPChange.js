@@ -77,16 +77,16 @@ const TotalPChange = () => {
         {/* Explanation Section */}
         <div className="flex-grow md:w-1/2 w-full mt-16 md:mt-3">
           <h3 className="text-lg font-bold mb-2 text-black">Explanation</h3>
-          <p className="text-gray-900 text-justify text-lg mb-4">
+          <p className="text-gray-900 text-justify mb-4">
             This bar chart compares the population data for the years 2074 and 2079 across three categories: male, female, and total population.
           </p>
-          <p className="text-gray-900 text-justify text-lg mb-2">
+          <p className="text-gray-900 text-justify mb-2">
             <strong>Total Population:</strong> The population grew from <strong>{data2074.total}</strong> in 2074 to <strong>{data2079.total}</strong> in 2079, indicating a <strong>{changes.total}%</strong> increase.
           </p>
-          <p className="text-gray-900 text-justify text-lg mb-2">
+          <p className="text-gray-900 text-justify mb-2">
             <strong>Male Population:</strong> The male population rose from <strong>{data2074.male}</strong> in 2074 to <strong>{data2079.male}</strong> in 2079, marking a <strong>{changes.male}%</strong> increase.
           </p>
-          <p className="text-gray-900 text-justify text-lg mb-2">
+          <p className="text-gray-900 text-justify mb-2">
             <strong>Female Population:</strong> The female population increased from <strong>{data2074.female}</strong> in 2074 to <strong>{data2079.female}</strong> in 2079, representing a <strong>{changes.female}%</strong> increase. 
           </p>
         </div>

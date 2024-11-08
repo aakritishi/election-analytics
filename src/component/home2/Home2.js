@@ -3,6 +3,7 @@ import DMayorStanding from './DMayorStandings'
 import Mayors from './Mayors'
 import TotalVoters from './TotalVoters'
 import Voters79 from './Voters79'
+import WardPresident2079 from './WardPre79'
 
 const Home2 = () => {
   return (
@@ -11,6 +12,7 @@ const Home2 = () => {
       <Voters79/>
       <Mayors/>
       <DMayorStanding/>
+      <WardPresident2079/>
     </div>
   )
 }

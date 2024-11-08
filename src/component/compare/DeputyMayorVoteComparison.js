@@ -22,17 +22,17 @@ ChartJS.register(
   Legend
 );
 
-const VoteComparison = () => {
+const DeputyMayorVoteComaprison = () => {
   // Total vote counts for 2074 and 2079
   const total2074 = {
-    congress: 2898 ,
-    uml: 2674 ,
-    maoist: 3418 ,
+    congress: 2912,
+    uml: 2623 ,
+    maoist: 3241,
   };
   const total2079 = {
-    congress: 652,
-    uml: 3626,
-    maoist: 5599,
+    congress: 5406,
+    uml: 3393,
+    maoist: 0,
   };
 
   // Chart data configuration
@@ -91,7 +91,7 @@ const VoteComparison = () => {
     <div className="flex flex-col lg:flex-row items-center w-full mx-auto p-6 my-4">
       <div className="w-full md:w-1/2" style={{ maxWidth: '100%', height: 'auto' }}>
         <h2 className="text-center text-lg font-bold mb-4 text-black">
-          Vote Comparison of the Parties (Mayor Standings)
+          Vote Comparison of the Parties (Deputy Mayor Standings)
         </h2>
         <div className="h-80 w-full sm:h-96 md:h-[400px]">
           <Line data={data} options={options} />
@@ -101,10 +101,10 @@ const VoteComparison = () => {
         <h2 className="text-lg font-bold mb-4">Explanation</h2>
         <p className="text-base">
           The line graph compares the total vote counts of three major political parties (Congress, UML, and Maoist)
-          across two election years: 2074 and 2079. Each line represents votes for Mayor positions.
+          across two election years: 2074 and 2079. Each line represents votes for Deputy Mayor positions.
         </p>
         <p className="text-base mt-4">
-          For example, UML experienced a significant drop in vote count from 2074 to 2079, while Maoist saw an increase.
+          For example, maoist experienced a significant drop in vote count from 2074 to 2079, while congress saw an increase.
           This visualization helps to understand the changing political support over the past 5 years.
         </p>
       </div>
@@ -112,4 +112,4 @@ const VoteComparison = () => {
   );
 };
 
-export default VoteComparison;
+export default DeputyMayorVoteComaprison;

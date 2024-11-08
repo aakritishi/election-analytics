@@ -6,6 +6,7 @@ import DisabilityData from './DisabilityData'
 import Mayor from './Mayor'
 import MayorStanding from './MayorStandings'
 import Voters74 from './Voters74'
+import WardPresident2074 from './WardPre74'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <DisabilityData/>
         <Mayor/>
         <MayorStanding/>
+        <WardPresident2074/>
     </div>
   )
 }
