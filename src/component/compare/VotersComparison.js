@@ -57,13 +57,13 @@ const VotersComparison = () => {
       <div className="flex flex-col lg:flex-row lg:space-x-6">
       {/* Bar Chart */}
       <div className="w-full md:w-1/2 max-w-xl" style={{ maxWidth: "600px", height: "400px" }}>
-        <h2 className="text-center text-lg font-semibold mb-4">Voters Distribution Comparison of 2074 and 2079</h2>
+        <h2 className="text-center text-lg font-bold mb-4">Voters Distribution Comparison of 2074 and 2079</h2>
         <Bar data={data} options={options} />
       </div>
 
       {/* Explanation Section */}
       <div className="flex-grow md:w-1/2 w-full mt-16 md:mt-3">
-        <h3 className="text-lg font-semibold mb-2">Explanation</h3>
+        <h3 className="text-lg font-bold mb-2">Explanation</h3>
         <p className="mb-2 text-justify">
           This bar chart illustrates the change in eligible voter populations between the years 2074 and 2079.
           We observe growth in all categories: male voters, female voters, and total eligible voters.
