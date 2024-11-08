@@ -8,7 +8,7 @@ const Comparison = () => {
     <div className='w-[98%] mx-auto p-4'>
         <TotalPChange/>
         <VotersComparison/>
-        <EligibleComparison/>
+        <EligibleComparison/> 
     </div>
   )
 }

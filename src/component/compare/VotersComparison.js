@@ -18,7 +18,7 @@ const VotersComparison = () => {
         data: [8724, 7780, 16504],
         backgroundColor: 'rgba(255, 99, 132, 0.6)', 
         borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 1,
+        borderWidth: 1, 
       },
     ],
   };

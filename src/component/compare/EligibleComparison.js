@@ -9,7 +9,7 @@ const EligibleComparison = () => {
   const data2074 = {
     male: 6634,
     female: 5709,
-    total: 12501,
+    total: 12501, 
   };
 
   const data2079 = {

@@ -87,7 +87,7 @@ const TotalPChange = () => {
             <strong>Male Population:</strong> The male population rose from <strong>{data2074.male}</strong> in 2074 to <strong>{data2079.male}</strong> in 2079, marking a <strong>{changes.male}%</strong> increase.
           </p>
           <p className="text-gray-900 text-justify text-lg md:text-lg mb-2">
-            <strong>Female Population:</strong> The female population increased from <strong>{data2074.female}</strong> in 2074 to <strong>{data2079.female}</strong> in 2079, representing a <strong>{changes.female}%</strong> increase.
+            <strong>Female Population:</strong> The female population increased from <strong>{data2074.female}</strong> in 2074 to <strong>{data2079.female}</strong> in 2079, representing a <strong>{changes.female}%</strong> increase. 
           </p>
         </div>
       </div>
