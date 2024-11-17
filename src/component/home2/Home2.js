@@ -4,6 +4,8 @@ import Mayors from './Mayors'
 import TotalVoters from './TotalVoters'
 import Voters79 from './Voters79'
 import WardPresident2079 from './WardPre79'
+import Analysis79 from './Analysis79'
+import WardPreExp79 from './WardPreExp'
 
 const Home2 = () => {
   return (
@@ -12,7 +14,9 @@ const Home2 = () => {
       <Voters79/>
       <Mayors/>
       <DMayorStanding/>
+      <Analysis79/>
       <WardPresident2079/>
+      <WardPreExp79/>
     </div>
   )
 }

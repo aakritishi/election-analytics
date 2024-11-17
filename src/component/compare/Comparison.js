@@ -3,6 +3,7 @@ import TotalPChange from './TotalPChange'
 import VotersComparison from './VotersComparison'
 import MayorVoteComparison from './MayorVoteComparison'
 import DeputyMayorVoteComparison from './DeputyMayorVoteComparison'
+import WardPreComparison from './WardPreComparison'
 // import EligibleComparison from './EligibleComparison'
 // import VoteComparison from './VoteComaprision'
 
@@ -13,6 +14,7 @@ const Comparison = () => {
         <VotersComparison/>
         <MayorVoteComparison/>
         <DeputyMayorVoteComparison/>
+        <WardPreComparison/>
         {/* <EligibleComparison/>  */}
         {/* <VoteComparison/> */}
     </div>

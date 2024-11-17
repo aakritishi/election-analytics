@@ -12,12 +12,15 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 const Mayors = () => {
   // Candidates data
   const candidates = [
-    { name: "डम्मर बहादुर रावत", age: "५२", party: "Maoist Center", votes: 5599, logo: maoist },
-    { name: "धर्म बहादुर शाही", age: "५३", party: "CPN-UML", votes: 3626, logo: uml },
-    { name: "बिन बहादुर सिंह", age: "५९", party: "Rastriya Swatantra Party", votes: 665, logo: independent },
-    { name: "छब्बी पन्त", age: "३१", party: "Nepali Congress", votes: 652, logo: congress },
-    { name: "सत्यलाल गौतम", age: "६४", party: "Janata Samajwadi", votes: 17, logo: jsp },
+    { name: "Dammar Bahadur Rawat", age: 52, party: "Maoist Center", votes: 5599, logo: maoist },
+    { name: "Dharama Bahadur Shahi", age: 53, party: "CPN-UML", votes: 3626, logo: uml },
+    { name: "Bin Bahadur Singh", age: 59, party: "Rastriya Swatantra Party", votes: 665, logo: independent },
+    { name: "Chabi Pant", age: 31, party: "Nepali Congress", votes: 652, logo: congress },
+    { name: "Satyalal Gautam", age: 64, party: "Janata Samajwadi", votes: 17, logo: jsp },
   ];
+
+  // Total votes
+  const totalVotes = 10559;
 
   // Sort candidates by votes in descending order
   const sortedCandidates = [...candidates].sort((a, b) => b.votes - a.votes);
@@ -90,25 +93,30 @@ const Mayors = () => {
                 <th className="px-4 py-2 border border-gray-600">Age</th>
                 <th className="px-4 py-2 border border-gray-600">Party</th>
                 <th className="px-4 py-2 border border-gray-600">Votes</th>
+                <th className="px-4 py-2 border border-gray-600">% of Total Votes (10559)</th> {/* Added this new column */}
               </tr>
             </thead>
             <tbody>
-              {sortedCandidates.map((candidate, index) => (
-                <tr
-                  key={index}
-                  className={`border border-gray-600 text-center ${
-                    candidate.votes === highestVotes ? "bg-yellow-300 text-black" : ""
-                  }`}
-                >
-                  <td className="px-4 py-2 border border-gray-600">{candidate.name}</td>
-                  <td className="px-4 py-2 border border-gray-600">{candidate.age}</td>
-                  <td className="px-4 py-2  flex items-center justify-center">
-                    <img src={candidate.logo} alt={`${candidate.party} logo`} className="w-6 h-6 mr-2" />
-                    {candidate.party}
-                  </td>
-                  <td className="px-4 py-2 border border-gray-600">{candidate.votes}</td>
-                </tr>
-              ))}
+              {sortedCandidates.map((candidate, index) => {
+                const percentage = ((candidate.votes / totalVotes) * 100).toFixed(1); 
+                return (
+                  <tr
+                    key={index}
+                    className={`border border-gray-600 text-center ${
+                      candidate.votes === highestVotes ? "bg-yellow-300 text-black" : ""
+                    }`}
+                  >
+                    <td className="px-4 py-2 border border-gray-600">{candidate.name}</td>
+                    <td className="px-4 py-2 border border-gray-600">{candidate.age}</td>
+                    <td className="px-4 py-2 flex items-center justify-center">
+                      <img src={candidate.logo} alt={`${candidate.party} logo`} className="w-6 h-6 mr-2" />
+                      {candidate.party}
+                    </td>
+                    <td className="px-4 py-2 border border-gray-600">{candidate.votes}</td>
+                    <td className="px-4 py-2 border border-gray-600">{percentage}%</td> {/* Display percentage */}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

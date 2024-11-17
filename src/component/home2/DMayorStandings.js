@@ -11,22 +11,31 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 const DMayorStanding = () => {
   
   const candidates = [
-    { name: "सरिता सिंह", age: "३३", party: "Nepali Congress", votes: 5406, logo: congress },
-    { name: "सुनिता बोहरा", age: "४३", party: "CPN-UML", votes: 3393, logo: uml },
-    { name: "सुशीला कुमारी शाही", age: "४३", party: "Rastriya Swatantra Party", votes: 94, logo: independent },
-    { name: "डम्मर कुमारी बानिया", age: "५२", party: "Rastriya Prajatantra Party(RPP)", votes: 48, logo: rrp },
+    { name: "Sarita Singh", age: 33, party: "Nepali Congress", votes: 5406, logo: congress },
+    { name: "Sunita Bohora", age: 43, party: "CPN-UML", votes: 3393, logo: uml },
+    { name: "Sushila Kumari Shahi", age: 43, party: "Rastriya Swatantra Party", votes: 94, logo: independent },
+    { name: "Dammar Kumari Baniya", age: 52, party: "Rastriya Prajatantra Party(RPP)", votes: 48, logo: rrp },
   ];
 
+  // Calculate total votes
+  const totalVotes = candidates.reduce((sum, candidate) => sum + candidate.votes, 0);
+
+  // Calculate the percentage of total votes for each candidate
+  const candidatesWithPercentage = candidates.map(candidate => ({
+    ...candidate,
+    percentage: ((candidate.votes / totalVotes) * 100).toFixed(1), 
+  }));
+
   // Find the highest vote
-  const highestVotes = Math.max(...candidates.map(candidate => candidate.votes));
+  const highestVotes = Math.max(...candidatesWithPercentage.map(candidate => candidate.votes));
 
   // Bar chart data
   const barChartData = {
-    labels: candidates.map(candidate => candidate.name),
+    labels: candidatesWithPercentage.map(candidate => candidate.name),
     datasets: [
       {
         label: null,
-        data: candidates.map(candidate => candidate.votes),
+        data: candidatesWithPercentage.map(candidate => candidate.votes),
         backgroundColor: [
           "rgba(255, 99, 132, 0.6)",
           "rgba(54, 162, 235, 0.6)",  
@@ -43,7 +52,6 @@ const DMayorStanding = () => {
       },
     ],
   };
-
 
   // Bar chart options with smaller label font size
   const barChartOptions = {
@@ -84,14 +92,15 @@ const DMayorStanding = () => {
                 <th className="px-4 py-2 border border-gray-600">Age</th>
                 <th className="px-4 py-2 border border-gray-600">Party</th>
                 <th className="px-4 py-2 border border-gray-600">Votes</th>
+                <th className="px-4 py-2 border border-gray-600">% of Total Votes (8941)</th> 
               </tr>
             </thead>
             <tbody>
-              {candidates.map((candidate, index) => (
+              {candidatesWithPercentage.map((candidate, index) => (
                 <tr
                   key={index}
                   className={`border border-gray-600 text-center ${
-                    candidate.votes === highestVotes ? "bg-yellow-300 font-bold text-black" : ""
+                    candidate.votes === highestVotes ? "bg-yellow-300 text-black" : ""
                   }`}
                 >
                   <td className="px-4 py-2 border border-gray-600">{candidate.name}</td>
@@ -101,6 +110,7 @@ const DMayorStanding = () => {
                     {candidate.party}
                   </td>
                   <td className="px-4 py-2 border border-gray-600">{candidate.votes}</td>
+                  <td className="px-4 py-2 border border-gray-600">{candidate.percentage}%</td> 
                 </tr>
               ))}
             </tbody>

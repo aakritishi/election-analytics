@@ -12,7 +12,7 @@ const WardPresident2079 = () => {
     { ward: 8, parties: { Maoist: 220, UML: 467, Congress: 520, RaPraPa: "-", Independent: "-" } },
     { ward: 9, parties: { Maoist: 158, UML: 276, Congress: 172, RaPraPa: "-", Independent: 0 } },
     { ward: 10, parties: { Maoist: 318, UML: 94, Congress: 231, RaPraPa: "-", Independent: "-" } },
-    { ward: 11, parties: { Maoist: "-", UML: 304, Congress: "-", RaPraPa: "-", Independent: 1 } },
+    { ward: 11, parties: { Maoist: "-", UML: 304, Congress: "-", RaPraPa: "1", Independent: 314 } },
     { ward: 12, parties: { Maoist: 466, UML: 357, Congress: 17, RaPraPa: "-", Independent: "-" } },
     { ward: 13, parties: { Maoist: 418, UML: 102, Congress: 186, RaPraPa: "-", Independent: 43 } },
   ];
@@ -48,7 +48,7 @@ const WardPresident2079 = () => {
                   <td
                     key={idx}
                     className={`border border-gray-500 text-center px-4 py-2 ${
-                      count === highest ? "bg-yellow-300 font-bold text-gray-800" : ""
+                      count === highest ? "bg-yellow-300 font-bold text-gray-800 underline" : ""
                     }`}
                   >
                     {count}

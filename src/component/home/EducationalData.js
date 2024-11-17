@@ -7,7 +7,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const EducationalData = () => {
   // Data for the table and chart
   const tableData = [
-    { level: 'Uneducated', female: 4511, male: 1073 },
+    { level: 'Uneducated', female: 4511, male: 4073 },
     { level: 'Below SLC', female: 613, male: 1293 },
     { level: 'SLC or Above SLC', female: 647, male: 1364 },
   ];

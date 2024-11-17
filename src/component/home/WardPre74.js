@@ -8,7 +8,7 @@ const WardPresident2074 = () => {
     { ward: 4, parties: { Maoist: 370, UML: 85, Congress: 231, RaPraPa: "-", Independent: "-" } },
     { ward: 5, parties: { Maoist: 544, UML: 53, Congress: 258, RaPraPa: "-", Independent: "-" } },
     { ward: 6, parties: { Maoist: 264, UML: 154, Congress: 152, RaPraPa: 8, Independent: "-" } },
-    { ward: 7, parties: { Maoist: 198, UML: 306, Congress: 115, RaPraPa: 74, Independent: "-" } },
+    { ward: 7, parties: { Maoist: 198, UML: 306, Congress: 115, RaPraPa: 74, Independent: "0" } },
     { ward: 8, parties: { Maoist: 198, UML: 331, Congress: 476, RaPraPa: 5, Independent: "-" } },
     { ward: 9, parties: { Maoist: 3, UML: 330, Congress: 163, RaPraPa: "-", Independent: "-" } },
     { ward: 10, parties: { Maoist: 246, UML: 95, Congress: 168, RaPraPa: 3, Independent: "-" } },

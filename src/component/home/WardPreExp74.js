@@ -12,7 +12,7 @@ const WardPreExp74 = () => {
       <div className="space-y-6">
         <div>
           <h2 className="text-xl font-semibold mb-2">1. Overall Performance Across Wards:</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="text-lg list-disc list-inside space-y-2">
             <li>Maoist Centre managed to be victorious in 7 out of the 13 wards.</li>
             <li>
               Maoist Centre received votes in all 13 wards, with counts varying significantly across
@@ -28,7 +28,7 @@ const WardPreExp74 = () => {
         {/* Section 2: Comparison Against Main Competitors */}
         <div>
           <h2 className="text-xl font-semibold mb-2">2. Comparison Against Main Competitors:</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="text-lg list-disc list-inside space-y-2">
             <li>
               <span className="font-bold">Ward 5:</span> Maoist Centre’s best performance, with 544
               votes, dominates CPN-UML (53 votes) and Nepali Congress (258 votes), showing strong
@@ -54,7 +54,7 @@ const WardPreExp74 = () => {
         {/* Section 3: Average Performance */}
         <div>
           <h2 className="text-xl font-semibold mb-2">3. Average Performance:</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="text-lg list-disc list-inside space-y-2">
             <li>
               Across the 13 wards, Maoist Centre’s vote count averages around{" "}
               <span className="font-bold">247 votes per ward</span>.
@@ -69,7 +69,7 @@ const WardPreExp74 = () => {
         {/* Section 4: Low-Performing Wards */}
         <div>
           <h2 className="text-xl font-semibold mb-2">4. Low-Performing Wards:</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="text-lg list-disc list-inside space-y-2">
             <li>
               <span className="font-bold">Ward 9:</span> The weakest for Maoist Centre with only 3
               votes, in contrast to CPN-UML's 330 votes and Nepali Congress's 163 votes.
@@ -84,7 +84,7 @@ const WardPreExp74 = () => {
         {/* Section 5: Potential for Growth */}
         <div>
           <h2 className="text-xl font-semibold mb-2">5. Potential for Growth:</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="text-lg list-disc  space-y-2">
             <li>
               The disparity in performance across wards suggests potential areas where Maoist Centre
               can focus on increasing its influence, particularly in{" "}
