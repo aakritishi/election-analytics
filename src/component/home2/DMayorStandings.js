@@ -11,10 +11,10 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 const DMayorStanding = () => {
   
   const candidates = [
-    { name: "सरिता सिंह", age: "३३", party: "नेपाली कांग्रेस", votes: 5406, logo: congress },
-    { name: "सुनिता बोहरा", age: "४३", party: "नेकपा एमाले", votes: 3393, logo: uml },
-    { name: "सुशीला कुमारी शाही", age: "४३", party: "राष्ट्रिय स्वतन्त्र", votes: 94, logo: independent },
-    { name: "डम्मर कुमारी बानिया", age: "५२", party: "राप्रपा", votes: 48, logo: rrp },
+    { name: "सरिता सिंह", age: "३३", party: "Nepali Congress", votes: 5406, logo: congress },
+    { name: "सुनिता बोहरा", age: "४३", party: "CPN-UML", votes: 3393, logo: uml },
+    { name: "सुशीला कुमारी शाही", age: "४३", party: "Rastriya Swatantra Party", votes: 94, logo: independent },
+    { name: "डम्मर कुमारी बानिया", age: "५२", party: "Rastriya Prajatantra Party(RPP)", votes: 48, logo: rrp },
   ];
 
   // Find the highest vote

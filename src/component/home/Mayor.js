@@ -9,16 +9,25 @@ import rrp from '../media/rrp.png';
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const Mayor = () => {
+  // Total voters
+  const totalVotes = 9061;
+
   // Candidates data
   const candidates = [
-    { name: "देवी पन्त", age: "२७", party: "नेपाली कांग्रेस", votes: 2898, logo: congress },
-    { name: "नबेन्द्र नेपाली", age: "३९", party: "नेकपा एमाले", votes: 2674, logo: uml },
-    { name: "टेक बहादुर रावल", age: "६०", party: "माओवादी", votes: 3418, logo: maoist },
-    { name: "लक्ष्मण सिंह", age: "३८", party: "राप्रपा", votes: 71, logo: rrp },
+    { name: "Devi Pant", age: 27, party: "Nepali Congress", votes: 2898, logo: congress },
+    { name: "Nabendra Nepali", age: 39, party: "CPN-UML", votes: 2674, logo: uml },
+    { name: "Tek Bahadur Rawal", age: 60, party: "Maoist Center", votes: 3418, logo: maoist },
+    { name: "Laxman Singh", age: 38, party: "Rastriya Prajatantra Party(RPP)", votes: 71, logo: rrp },
   ];
 
+  // Add percentage of total votes
+  const candidatesWithPercentage = candidates.map(candidate => ({
+    ...candidate,
+    percentage: ((candidate.votes / totalVotes) * 100).toFixed(1),
+  }));
+
   // Sort candidates from highest to lowest votes
-  const sortedCandidates = [...candidates].sort((a, b) => b.votes - a.votes);
+  const sortedCandidates = [...candidatesWithPercentage].sort((a, b) => b.votes - a.votes);
 
   // Find the highest vote
   const highestVotes = sortedCandidates[0]?.votes || 0;
@@ -32,7 +41,7 @@ const Mayor = () => {
         data: candidates.map(candidate => candidate.votes),
         backgroundColor: [
           "rgba(255, 99, 132, 0.6)",
-          "rgba(54, 162, 235, 0.6)",  
+          "rgba(54, 162, 235, 0.6)",
           "rgba(255, 206, 86, 0.6)",
           "rgba(75, 192, 192, 0.6)",
         ],
@@ -86,6 +95,7 @@ const Mayor = () => {
                 <th className="px-4 py-2 border border-gray-600">Age</th>
                 <th className="px-4 py-2 border border-gray-600">Party</th>
                 <th className="px-4 py-2 border border-gray-600">Votes</th>
+                <th className="px-4 py-2 border border-gray-600">% of Total Votes (9061)</th>
               </tr>
             </thead>
             <tbody>
@@ -94,13 +104,14 @@ const Mayor = () => {
                   key={index}
                   className={`border border-gray-600 text-center ${candidate.votes === highestVotes ? 'bg-yellow-300 text-black' : ''}`}
                 >
-                  <td className="px-4 py-2 border border-gray-600">{candidate.name}</td>
+                  <td className="px-4 py-2">{candidate.name}</td>
                   <td className="px-4 py-2 border border-gray-600">{candidate.age}</td>
-                  <td className="px-4 py-2 border border-gray-600 flex items-center justify-center">
+                  <td className="px-4 py-2 flex items-center justify-center">
                     <img src={candidate.logo} alt={`${candidate.party} logo`} className="w-6 h-6 mr-2" />
                     {candidate.party}
                   </td>
                   <td className="px-4 py-2 border border-gray-600">{candidate.votes}</td>
+                  <td className="px-4 py-2 border border-gray-600">{candidate.percentage}%</td>
                 </tr>
               ))}
             </tbody>

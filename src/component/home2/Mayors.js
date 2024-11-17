@@ -12,11 +12,11 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 const Mayors = () => {
   // Candidates data
   const candidates = [
-    { name: "डम्मर बहादुर रावत", age: "५२", party: "माओवादी", votes: 5599, logo: maoist },
-    { name: "धर्म बहादुर शाही", age: "५३", party: "नेकपा एमाले", votes: 3626, logo: uml },
-    { name: "बिन बहादुर सिंह", age: "५९", party: "राष्ट्रिय स्वतन्त्र", votes: 665, logo: independent },
-    { name: "छब्बी पन्त", age: "३१", party: "नेपाली कांग्रेस", votes: 652, logo: congress },
-    { name: "सत्यलाल गौतम", age: "६४", party: "जनता समाजवादी", votes: 17, logo: jsp },
+    { name: "डम्मर बहादुर रावत", age: "५२", party: "Maoist Center", votes: 5599, logo: maoist },
+    { name: "धर्म बहादुर शाही", age: "५३", party: "CPN-UML", votes: 3626, logo: uml },
+    { name: "बिन बहादुर सिंह", age: "५९", party: "Rastriya Swatantra Party", votes: 665, logo: independent },
+    { name: "छब्बी पन्त", age: "३१", party: "Nepali Congress", votes: 652, logo: congress },
+    { name: "सत्यलाल गौतम", age: "६४", party: "Janata Samajwadi", votes: 17, logo: jsp },
   ];
 
   // Sort candidates by votes in descending order
