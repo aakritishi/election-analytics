@@ -68,6 +68,19 @@ const Header = () => {
               </Link>
             </li>
             <li>
+              <Link to="/2081-data-analytics" onClick={toggleMenu}>
+                <span
+                  className={`block px-4 py-2 rounded-md text-lg ${
+                    location.pathname === "/2081-data-analytics"
+                      ? "bg-blue-600 text-white"
+                      : "bg-blue-500 text-white hover:bg-blue-600"
+                  }`}
+                >
+                  2081 Data
+                </span>
+              </Link>
+            </li>
+            <li>
               <Link to="/comparison" onClick={toggleMenu}>
                 <span
                   className={`block px-4 py-2 rounded-md text-lg ${
@@ -106,6 +119,17 @@ const Header = () => {
             }`}
           >
             2079 Data
+          </button>
+        </Link>
+        <Link to="/2081-data-analytics">
+          <button
+            className={`px-4 py-2 rounded-md focus:outline-none ${
+              location.pathname === "/2081-data-analytics"
+                ? "bg-blue-600 text-white"
+                : "bg-blue-500 text-white hover:bg-blue-600"
+            }`}
+          >
+            2081 Data
           </button>
         </Link>
         <Link to="/comparison">
