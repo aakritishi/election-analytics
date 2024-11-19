@@ -3,6 +3,7 @@ import React from 'react';
 const ElectionForecast = () => {
   return (
     <div className="text-gray-800 p-6 text-justify">
+      <h2 className="text-xl md:text-2xl my-2 text-gray-900 font-bold">Forecast for Election 2081</h2>
       <p className="text-lg font-bold">
         In 2079, the total eligible voters were 16,504, and in 2081, the total eligible voters increased to 16,598.
         So, the percentage increase in the total eligible voters is approximately 0.57%.

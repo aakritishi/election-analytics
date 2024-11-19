@@ -18,11 +18,11 @@ const Header = () => {
           style={{
             fontFamily: "Poppins, sans-serif",
             color: "#2e6ce0",
-            fontSize: "1.5rem",
+            // fontSize: "1.5rem",
           }}
-          className="font-semibold"
+          className="font-semibold text-lg md:text-xl"
         >
-          Election Analytics
+          Nalgad Municipality <br/> Election Analytics
         </h1>
       </Link>
 

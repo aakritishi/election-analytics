@@ -5,7 +5,7 @@ import MayorVoteComparison from './MayorVoteComparison'
 import DeputyMayorVoteComparison from './DeputyMayorVoteComparison'
 import WardPreComparison from './WardPreComparison'
 import KeyObservations from './WardPreExp'
-import MaoistCentreWinningProbability from './ProbabilityTable'
+// import MaoistCentreWinningProbability from './ProbabilityTable'
 import VotesMayorComparison from './VotesMayorComparision'
 import VotesDeputyComparison from './VotesDeputyComaprison'
 // import EligibleComparison from './EligibleComparison'
@@ -22,7 +22,7 @@ const Comparison = () => {
         <VotesDeputyComparison/>
         <WardPreComparison/>
         <KeyObservations/>
-        <MaoistCentreWinningProbability/>
+        {/* <MaoistCentreWinningProbability/> */}
         {/* <EligibleComparison/>  */}
         {/* <VoteComparison/> */}
     </div>
