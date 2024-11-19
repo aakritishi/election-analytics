@@ -31,7 +31,7 @@ const Header = () => {
         onClick={toggleMenu}
         className="lg:hidden text-3xl text-blue-500 font-semibold"
       >
-        {menuOpen ? <RxCross2 /> : <MdOutlineMenu />}
+        {menuOpen ? <RxCross2 /> : <MdOutlineMenu />}  
       </button>
 
       {/* Vertical Sliding Menu for Mobile */}

@@ -10,7 +10,7 @@ const ElectionForecast = () => {
       </p>
       
       <p className="text-lg font-semibold mt-4">
-        In 2074, the percentage of voter participation out of the total eligible voters is:
+        In 2074, the percentage of votes registered out of the total eligible is:
       </p>
       <ul className="text-lg ml-5" style={{ listStyleType: 'disc' }}>
         <li> Mayor election: 72.45%</li>
