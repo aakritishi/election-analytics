@@ -84,7 +84,7 @@ const WardPreExp74 = () => {
         {/* Section 5: Potential for Growth */}
         <div>
           <h2 className="text-xl font-semibold mb-2">5. Potential for Growth:</h2>
-          <ul className="text-lg list-disc  space-y-2">
+          <ul className="text-lg list-disc list-inside space-y-2">
             <li>
               The disparity in performance across wards suggests potential areas where Maoist Centre
               can focus on increasing its influence, particularly in{" "}
